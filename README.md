@@ -1,1 +1,1 @@
-This is an automated test of a dummy page using Playwright JavaScript.
+ This is an automated test of a [practice page](https://automationexercise.com/) using Playwright JavaScript. Test cases are included on [the page.](https://automationexercise.com/test_cases)
