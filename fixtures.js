@@ -1,5 +1,6 @@
 const base = require('@playwright/test')
 import { ExamplePage } from './pages/ExamplePage'
+import { HomePage } from './pages/HomePage'
 
 export const test = base.test.extend({
 
@@ -7,6 +8,11 @@ export const test = base.test.extend({
     examplePage: async ({ page, isMobile }, use) => {
         const examplePage = new ExamplePage(page, isMobile)
         await use(examplePage)
+    },
+
+    homePage: async ({ page, isMobile }, use) => {
+        const homePage = new HomePage(page, isMobile)
+        await use(homePage)
     },
 
     //an example of a beforeTest fixture

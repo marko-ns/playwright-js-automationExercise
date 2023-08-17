@@ -1,0 +1,1 @@
+This is an automated test of a dummy page using Playwright JavaScript.
