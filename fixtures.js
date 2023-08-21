@@ -1,6 +1,8 @@
 const base = require('@playwright/test')
 import { ExamplePage } from './pages/ExamplePage'
 import { HomePage } from './pages/HomePage'
+import { SignupLoginPage } from './pages/SignupLoginPage'
+import { SignupPage } from './pages/SignupPage'
 
 export const test = base.test.extend({
 
@@ -8,6 +10,16 @@ export const test = base.test.extend({
     examplePage: async ({ page, isMobile }, use) => {
         const examplePage = new ExamplePage(page, isMobile)
         await use(examplePage)
+    },
+
+    signupLoginPage: async ({ page, isMobile }, use) => {
+        const signupLoginPage = new SignupLoginPage(page, isMobile)
+        await use(signupLoginPage)
+    },
+
+    signupPage: async ({ page, isMobile }, use) => {
+        const signupPage = new SignupPage(page, isMobile)
+        await use(signupPage)
     },
 
     homePage: async ({ page, isMobile }, use) => {
