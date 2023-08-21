@@ -7,6 +7,7 @@ export class HomePage {
         this.slider = this.page.locator("#slider")
         this.signupLoginButton = this.page.getByRole("link", { name: " Signup / Login" })
         this.deleteAccountButton = this.page.getByRole("link", {name: " Delete Account"})
+        this.logoutButton = this.page.getByRole("link", {name: " Logout"})
     }
 
     async goToHomePage() {
