@@ -1,4 +1,5 @@
 const base = require('@playwright/test')
+import { ContactUsPage } from './pages/ContactUsPage'
 import { ExamplePage } from './pages/ExamplePage'
 import { HomePage } from './pages/HomePage'
 import { SignupLoginPage } from './pages/SignupLoginPage'
@@ -10,6 +11,11 @@ export const test = base.test.extend({
     examplePage: async ({ page, isMobile }, use) => {
         const examplePage = new ExamplePage(page, isMobile)
         await use(examplePage)
+    },
+
+    contactUsPage: async ({ page, isMobile }, use) => {
+        const contactUsPage = new ContactUsPage(page, isMobile)
+        await use(contactUsPage)
     },
 
     signupLoginPage: async ({ page, isMobile }, use) => {
