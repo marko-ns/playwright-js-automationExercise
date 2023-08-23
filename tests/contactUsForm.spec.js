@@ -8,5 +8,4 @@ test('Contact Us Form.', async ({ page, isMobile, homePage, contactUsPage }) => 
     await expect(contactUsPage.getInTouchHeading).toBeVisible()
     await contactUsPage.fillOutDetails()
     await expect(contactUsPage.successAlert).toBeVisible()
-    await page.pause()
 })
