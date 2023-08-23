@@ -1,1 +1,3 @@
- This is an automated test of a [practice page](https://automationexercise.com/) using Playwright JavaScript. Test cases are included on [the page.](https://automationexercise.com/test_cases)
+ This is an automated test of a [practice page](https://automationexercise.com/) using Playwright and JavaScript. Test cases are included on [the page.](https://automationexercise.com/test_cases) <br> The commands for running the tests are: 
+- Running a single test headed using chromium: **ENV=.env.staging npx playwright test exampletest.spec.js --headed --project=chromium**
+- Running all the tests headed: **ENV=.env.staging npx playwright test --headed**
