@@ -4,6 +4,7 @@ import { ExamplePage } from './pages/ExamplePage'
 import { HomePage } from './pages/HomePage'
 import { SignupLoginPage } from './pages/SignupLoginPage'
 import { SignupPage } from './pages/SignupPage'
+import { TestCasesPage } from './pages/TestCasesPage'
 
 export const test = base.test.extend({
 
@@ -11,6 +12,11 @@ export const test = base.test.extend({
     examplePage: async ({ page, isMobile }, use) => {
         const examplePage = new ExamplePage(page, isMobile)
         await use(examplePage)
+    },
+
+    testCasesPage: async ({ page, isMobile }, use) => {
+        const testCasesPage = new TestCasesPage(page, isMobile)
+        await use(testCasesPage)
     },
 
     contactUsPage: async ({ page, isMobile }, use) => {
