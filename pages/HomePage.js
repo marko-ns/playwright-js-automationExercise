@@ -10,6 +10,7 @@ export class HomePage {
         this.logoutButton = this.page.getByRole("link", {name: " Logout"})
         this.contactUsButton = this.page.getByRole("link", {name: " Contact us"})
         this.testCasesButton = this.page.getByRole("link", {name: " Test Cases", exact: true})
+        this.productsButton = this.page.getByRole("link", {name: " Products"})
     }
 
     async goToHomePage() {

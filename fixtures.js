@@ -39,6 +39,16 @@ export const test = base.test.extend({
         await use(homePage)
     },
 
+    adBlock: async ({ page, isMobile }, use) => {
+        await page.route("**/*", request => {
+            request.request().url().startsWith("https://googleads.")
+              ? request.abort()
+              : request.continue();
+            return;
+          });
+        await use(page)
+    },
+
     //an example of a beforeTest fixture
     //the code here goes to the Wiktionary free dictionary page before the test begins
     //basically anything you write BEFORE await use() will be run before the test
